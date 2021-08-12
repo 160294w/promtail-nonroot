@@ -1,6 +1,7 @@
 .PHONY: build
 
-NAME=160294w/promtail
+PUSH_NAME=160294w/promtail
+NAME=nonroot-promtail
 VERSION=latest
 bulid:
-	docker build -t ${NAME} .
+	docker build --no-cache -t ${NAME} .
